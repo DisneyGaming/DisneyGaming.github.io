@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
     const loginBox = document.getElementById('loginBox');
     const accessGranted = document.getElementById('accessGranted');
-    const dossierBox = document.querySelector('.dossier');
     const randomPassword = Math.random().toString(36).slice(-15);
     const loginButton = document.getElementById('loginButton');
 
@@ -66,9 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let flashCount = 0;
         const flashInterval = setInterval(() => {
             if (flashCount < 3) {
-                dossierBox.style.backgroundColor = 'green';
+                accessGranted.style.backgroundColor = 'green';
                 setTimeout(() => {
-                    dossierBox.style.backgroundColor = '';
+                    accessGranted.style.backgroundColor = '';
                 }, 500);
                 flashCount++;
             } else {
