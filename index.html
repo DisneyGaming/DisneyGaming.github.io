@@ -25,6 +25,21 @@
         
         .login-animation {
             /* Add your animation styles here */
+            @keyframes loginAnimation {
+                0% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.2);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+
+            .login-animation {
+                animation: loginAnimation 2s infinite;
+            }
         }
         
         .access-granted {
