@@ -11,7 +11,7 @@ body {
     overflow: hidden;
 }
 
-.login-container {
+.main-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,14 +19,15 @@ body {
     width: 100%;
 }
 
-.login-box {
+.login-box, .dossier {
     background-color: #2e2e2e;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
     width: 300px;
-    transition: transform 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    position:absolute
 }
 
 .logo {
@@ -50,7 +51,7 @@ label {
 }
 
 input[type="text"], input[type="password"] {
-    width: 100%;
+    width: 93.5%;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -73,21 +74,17 @@ button:hover {
     background-color: #666;
 }
 
+button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
 .access-granted {
     display: none;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
-}
-
-.dossier {
-    background-color: #2e2e2e;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    width: 300px;
 }
 
 .access-granted .logo {

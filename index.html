@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-box">
+    <div class="main-container">
+        <div class="login-box" id="loginBox">
             <img src="goc_logo.png" alt="GOC Logo" class="logo">
             <h1>GOC Secure Login</h1>
             <form id="loginForm">
@@ -20,15 +20,15 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" required>
                 </div>
-                <button type="submit">Login</button>
+                <button type="submit" id="loginButton" disabled>Login</button>
             </form>
         </div>
-    </div>
-    <div class="access-granted" id="accessGranted">
-        <div class="dossier">
-            <img src="goc_logo.png" alt="GOC Logo" class="logo">
-            <h1>Access Granted</h1>
-            <p>Welcome, Agent Pinewood.</p>
+        <div class="access-granted" id="accessGranted">
+            <div class="dossier" id="accessGranted">
+                <img src="goc_logo.png" alt="GOC Logo" class="logo">
+                <h1>Access Granted</h1>
+                <p>Welcome, Agent Pinewood.</p>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
