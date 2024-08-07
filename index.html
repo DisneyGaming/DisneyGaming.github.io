@@ -1,75 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>SCP Login</title>
-    <style>
-        /* Add your custom CSS styles here */
-        .login-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
-        }
-        
-        .login-button {
-            padding: 10px 20px;
-            background-color: #ff0000;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .login-animation {
-            /* Add your animation styles here */
-            @keyframes loginAnimation {
-                0% {
-                    transform: scale(1);
-                }
-                50% {
-                    transform: scale(1.2);
-                }
-                100% {
-                    transform: scale(1);
-                }
-            }
-
-            .login-animation {
-                animation: loginAnimation 2s infinite;
-            }
-        }
-        
-        .access-granted {
-            display: none;
-            text-align: center;
-            font-size: 24px;
-            color: #00ff00;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOC Login</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="login-container">
-        <h1>Welcome to SCP</h1>
-        <button class="login-button" onclick="startLoginAnimation()">Login</button>
-        <div class="login-animation">
-            <!-- Add your animation elements here -->
-        </div>
-        <div class="access-granted">
-            Access Granted
+        <div class="login-box">
+            <img src="goc_logo.png" alt="GOC Logo" class="logo">
+            <h1>GOC Secure Login</h1>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
         </div>
     </div>
-
-    <script>
-        function startLoginAnimation() {
-            // Add your animation logic here
-            // For example, you can use CSS animations or JavaScript libraries like GSAP
-            // Once the animation is complete, show the access granted screen
-            document.querySelector('.login-animation').style.display = 'none';
-            document.querySelector('.access-granted').style.display = 'block';
-        }
-    </script>
+    <div class="access-granted" id="accessGranted">
+        <div class="dossier">
+            <img src="goc_logo.png" alt="GOC Logo" class="logo">
+            <h1>Access Granted</h1>
+            <p>Welcome, Agent Pinewood.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
